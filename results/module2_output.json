@@ -1,0 +1,62 @@
+[
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "concept_scores": {
+      "조건문": 0.632,
+      "반복문": 0.63,
+      "배열/문자열": 0.66
+    },
+    "weakest_concept": "배열/문자열",
+    "n_submissions": 17
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "concept_scores": {
+      "조건문": 0.138,
+      "반복문": 0.099,
+      "배열/문자열": 0.087
+    },
+    "weakest_concept": "조건문",
+    "n_submissions": 11
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "concept_scores": {
+      "조건문": 0.278,
+      "반복문": 0.189,
+      "배열/문자열": 0.255
+    },
+    "weakest_concept": "조건문",
+    "n_submissions": 11
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "concept_scores": {
+      "조건문": 0.004,
+      "반복문": 0.0,
+      "배열/문자열": 0.0
+    },
+    "weakest_concept": "조건문",
+    "n_submissions": 17
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "concept_scores": {
+      "조건문": 0.243,
+      "반복문": 0.171,
+      "배열/문자열": 0.157
+    },
+    "weakest_concept": "조건문",
+    "n_submissions": 17
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "concept_scores": {
+      "조건문": 0.739,
+      "반복문": 0.809,
+      "배열/문자열": 0.743
+    },
+    "weakest_concept": "반복문",
+    "n_submissions": 17
+  }
+]

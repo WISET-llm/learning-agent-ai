@@ -1,0 +1,20 @@
+{
+  "default_params": {
+    "macro_f1": 0.7778,
+    "precision": 0.75,
+    "recall": 0.9,
+    "n_eval_points": 18,
+    "decay": 0.7,
+    "threshold": 0.5
+  },
+  "best_params": {
+    "macro_f1": 0.7778,
+    "precision": 0.75,
+    "recall": 0.9,
+    "n_eval_points": 18,
+    "decay": 0.5,
+    "threshold": 0.4
+  },
+  "target_macro_f1": 0.65,
+  "target_achieved": true
+}
