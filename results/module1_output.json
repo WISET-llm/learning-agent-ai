@@ -1,0 +1,902 @@
+[
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 1,
+    "timestep": 2,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 15,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 3,
+    "timestep": 3,
+    "compile_ok": true,
+    "test_pass_rate": 0.8125,
+    "n_failed": 3,
+    "n_total": 16,
+    "error_pattern": "partial_failure_logic"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 5,
+    "timestep": 1,
+    "compile_ok": true,
+    "test_pass_rate": 0.875,
+    "n_failed": 1,
+    "n_total": 8,
+    "error_pattern": "partial_failure_logic"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 12,
+    "timestep": 4,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 20,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 13,
+    "timestep": 0,
+    "compile_ok": true,
+    "test_pass_rate": 0.695652,
+    "n_failed": 7,
+    "n_total": 23,
+    "error_pattern": "partial_failure_logic"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 17,
+    "timestep": 9,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 26,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 20,
+    "timestep": 8,
+    "compile_ok": true,
+    "test_pass_rate": 0.785714,
+    "n_failed": 3,
+    "n_total": 14,
+    "error_pattern": "partial_failure_logic"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 21,
+    "timestep": 7,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 20,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 22,
+    "timestep": 10,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 25,
+    "n_total": 25,
+    "error_pattern": "helper_function_missing_return"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 24,
+    "timestep": 5,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 22,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 25,
+    "timestep": 6,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 21,
+    "n_total": 21,
+    "error_pattern": "compile_error_other"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 34,
+    "timestep": 14,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 14,
+    "n_total": 14,
+    "error_pattern": "undeclared_variable_or_method"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 37,
+    "timestep": 12,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 15,
+    "n_total": 15,
+    "error_pattern": "compile_error_other"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 39,
+    "timestep": 13,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 19,
+    "n_total": 19,
+    "error_pattern": "compile_error_other"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 40,
+    "timestep": 11,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 13,
+    "n_total": 13,
+    "error_pattern": "undeclared_variable_or_method"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 46,
+    "timestep": 15,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 18,
+    "n_total": 18,
+    "error_pattern": "type_mismatch"
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "problem_id": 71,
+    "timestep": 16,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 16,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "problem_id": 1,
+    "timestep": 2,
+    "compile_ok": true,
+    "test_pass_rate": 0.6,
+    "n_failed": 6,
+    "n_total": 15,
+    "error_pattern": "partial_failure_logic"
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "problem_id": 3,
+    "timestep": 3,
+    "compile_ok": true,
+    "test_pass_rate": 0.75,
+    "n_failed": 4,
+    "n_total": 16,
+    "error_pattern": "partial_failure_logic"
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "problem_id": 5,
+    "timestep": 1,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 8,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "problem_id": 12,
+    "timestep": 4,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 20,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "problem_id": 13,
+    "timestep": 0,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 23,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "problem_id": 24,
+    "timestep": 5,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 22,
+    "n_total": 22,
+    "error_pattern": "undeclared_variable_or_method"
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "problem_id": 34,
+    "timestep": 9,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 14,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "problem_id": 37,
+    "timestep": 7,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 15,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "problem_id": 39,
+    "timestep": 8,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 19,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "problem_id": 40,
+    "timestep": 6,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 13,
+    "n_total": 13,
+    "error_pattern": "type_mismatch"
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "problem_id": 46,
+    "timestep": 10,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 18,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "problem_id": 1,
+    "timestep": 2,
+    "compile_ok": true,
+    "test_pass_rate": 0.466667,
+    "n_failed": 8,
+    "n_total": 15,
+    "error_pattern": "partial_failure_logic"
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "problem_id": 3,
+    "timestep": 3,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 16,
+    "n_total": 16,
+    "error_pattern": "syntax_error_unbalanced"
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "problem_id": 5,
+    "timestep": 1,
+    "compile_ok": true,
+    "test_pass_rate": 0.625,
+    "n_failed": 3,
+    "n_total": 8,
+    "error_pattern": "partial_failure_logic"
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "problem_id": 12,
+    "timestep": 4,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 20,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "problem_id": 13,
+    "timestep": 0,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 23,
+    "n_total": 23,
+    "error_pattern": "undeclared_variable_or_method"
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "problem_id": 34,
+    "timestep": 8,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 14,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "problem_id": 37,
+    "timestep": 6,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 15,
+    "n_total": 15,
+    "error_pattern": "type_mismatch"
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "problem_id": 39,
+    "timestep": 7,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 19,
+    "n_total": 19,
+    "error_pattern": "undeclared_variable_or_method"
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "problem_id": 40,
+    "timestep": 5,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 13,
+    "n_total": 13,
+    "error_pattern": "undeclared_variable_or_method"
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "problem_id": 46,
+    "timestep": 9,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 18,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "problem_id": 71,
+    "timestep": 10,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 16,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 1,
+    "timestep": 2,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 15,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 3,
+    "timestep": 3,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 16,
+    "n_total": 16,
+    "error_pattern": "compile_error_other"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 5,
+    "timestep": 1,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 8,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 12,
+    "timestep": 4,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 20,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 13,
+    "timestep": 0,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 23,
+    "n_total": 23,
+    "error_pattern": "helper_function_missing_return"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 17,
+    "timestep": 9,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 26,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 20,
+    "timestep": 8,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 14,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 21,
+    "timestep": 7,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 20,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 22,
+    "timestep": 10,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 25,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 24,
+    "timestep": 5,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 22,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 25,
+    "timestep": 6,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 21,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 34,
+    "timestep": 14,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 14,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 37,
+    "timestep": 12,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 15,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 39,
+    "timestep": 13,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 19,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 40,
+    "timestep": 11,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 13,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 46,
+    "timestep": 15,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 18,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "problem_id": 71,
+    "timestep": 16,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 16,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 1,
+    "timestep": 2,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 15,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 3,
+    "timestep": 3,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 16,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 5,
+    "timestep": 1,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 8,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 12,
+    "timestep": 4,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 20,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 13,
+    "timestep": 0,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 23,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 17,
+    "timestep": 9,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 26,
+    "n_total": 26,
+    "error_pattern": "compile_error_other"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 20,
+    "timestep": 8,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 14,
+    "n_total": 14,
+    "error_pattern": "helper_function_missing_return"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 21,
+    "timestep": 7,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 20,
+    "n_total": 20,
+    "error_pattern": "helper_function_missing_return"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 22,
+    "timestep": 10,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 25,
+    "n_total": 25,
+    "error_pattern": "undeclared_variable_or_method"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 24,
+    "timestep": 5,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 22,
+    "n_total": 22,
+    "error_pattern": "undeclared_variable_or_method"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 25,
+    "timestep": 6,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 21,
+    "n_total": 21,
+    "error_pattern": "compile_error_other"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 34,
+    "timestep": 14,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 14,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 37,
+    "timestep": 12,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 15,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 39,
+    "timestep": 13,
+    "compile_ok": true,
+    "test_pass_rate": 0.789474,
+    "n_failed": 4,
+    "n_total": 19,
+    "error_pattern": "partial_failure_logic"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 40,
+    "timestep": 11,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 13,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 46,
+    "timestep": 15,
+    "compile_ok": true,
+    "test_pass_rate": 0.444444,
+    "n_failed": 10,
+    "n_total": 18,
+    "error_pattern": "partial_failure_logic"
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "problem_id": 71,
+    "timestep": 16,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 16,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 1,
+    "timestep": 2,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 15,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 3,
+    "timestep": 3,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 16,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 5,
+    "timestep": 1,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 8,
+    "n_total": 8,
+    "error_pattern": "compile_error_other"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 12,
+    "timestep": 4,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 20,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 13,
+    "timestep": 0,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 23,
+    "n_total": 23,
+    "error_pattern": "helper_function_missing_return"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 17,
+    "timestep": 9,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 26,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 20,
+    "timestep": 8,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 14,
+    "n_total": 14,
+    "error_pattern": "compile_error_other"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 21,
+    "timestep": 7,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 20,
+    "n_total": 20,
+    "error_pattern": "compile_error_other"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 22,
+    "timestep": 10,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 25,
+    "n_total": 25,
+    "error_pattern": "helper_function_missing_return"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 24,
+    "timestep": 5,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 22,
+    "n_total": 22,
+    "error_pattern": "helper_function_missing_return"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 25,
+    "timestep": 6,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 21,
+    "n_total": 21,
+    "error_pattern": "helper_function_missing_return"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 34,
+    "timestep": 14,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 14,
+    "n_total": 14,
+    "error_pattern": "compile_error_other"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 37,
+    "timestep": 12,
+    "compile_ok": true,
+    "test_pass_rate": 1.0,
+    "n_failed": 0,
+    "n_total": 15,
+    "error_pattern": "all_passed"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 39,
+    "timestep": 13,
+    "compile_ok": true,
+    "test_pass_rate": 0.368421,
+    "n_failed": 12,
+    "n_total": 19,
+    "error_pattern": "partial_failure_logic"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 40,
+    "timestep": 11,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 13,
+    "n_total": 13,
+    "error_pattern": "helper_function_missing_return"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 46,
+    "timestep": 15,
+    "compile_ok": true,
+    "test_pass_rate": 0.555556,
+    "n_failed": 8,
+    "n_total": 18,
+    "error_pattern": "partial_failure_logic"
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "problem_id": 71,
+    "timestep": 16,
+    "compile_ok": false,
+    "test_pass_rate": 0.0,
+    "n_failed": 16,
+    "n_total": 16,
+    "error_pattern": "undeclared_variable_or_method"
+  }
+]

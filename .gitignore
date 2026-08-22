@@ -1,0 +1,6 @@
+.env
+data/raw/
+results/raw/
+*.pkl
+*.pt
+*.ckpt
