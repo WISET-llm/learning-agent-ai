@@ -1,0 +1,29 @@
+{
+  "n_total_transition_points": 78,
+  "n_skipped_true_label_outside_pilot_pool": 21,
+  "n_eval_points": 57,
+  "methods": {
+    "proposed": {
+      "recall@1": 0.4211,
+      "recall@3": 0.7193,
+      "ndcg@3": 0.5794
+    },
+    "random": {
+      "recall@1": 0.2632,
+      "recall@3": 0.5789,
+      "ndcg@3": 0.4486
+    },
+    "by_difficulty": {
+      "recall@1": 0.4561,
+      "recall@3": 0.8596,
+      "ndcg@3": 0.7015
+    },
+    "by_pass_rate": {
+      "recall@1": 0.3333,
+      "recall@3": 0.7018,
+      "ndcg@3": 0.5405
+    }
+  },
+  "target_recall@3": 0.7,
+  "target_achieved": true
+}
