@@ -1,0 +1,158 @@
+{
+  "problems": [
+    {
+      "problem_id": 1,
+      "assignment_id": 439,
+      "concept_groups": [
+        "조건문"
+      ],
+      "n_kc": 4,
+      "difficulty": "하",
+      "requirement": "Write a function in Java that implements the following logic: Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden, so in that case just return 20.",
+      "prerequisite_concept": null
+    },
+    {
+      "problem_id": 3,
+      "assignment_id": 439,
+      "concept_groups": [
+        "조건문"
+      ],
+      "n_kc": 5,
+      "difficulty": "중",
+      "requirement": "Write a function in Java that implements the following logic: Given a number n, return true if n is in the range 1..10, inclusive. Unless \"outsideMode\" is true, in which case return true if the number is less or equal to 1, or greater or equal to 10.",
+      "prerequisite_concept": null
+    },
+    {
+      "problem_id": 5,
+      "assignment_id": 439,
+      "concept_groups": [
+        "조건문"
+      ],
+      "n_kc": 3,
+      "difficulty": "하",
+      "requirement": "Write a function in Java that implements the following logic: Your cell phone rings. Return true if you should answer it. Normally you answer, except in the morning you only answer if it is your mom calling. In all cases, if you are asleep, you do not answer.",
+      "prerequisite_concept": null
+    },
+    {
+      "problem_id": 12,
+      "assignment_id": 439,
+      "concept_groups": [
+        "조건문"
+      ],
+      "n_kc": 5,
+      "difficulty": "중",
+      "requirement": "Write a function in Java that implements the following logic: The squirrels in Palo Alto spend most of the day playing. In particular, they play if the temperature is between 60 and 90 (inclusive). Unless it is summer, then the upper limit is 100 instead of 90. Given an int temperature and a boolean isSummer, return true if the squirrels play and false otherwise.",
+      "prerequisite_concept": null
+    },
+    {
+      "problem_id": 13,
+      "assignment_id": 439,
+      "concept_groups": [
+        "조건문"
+      ],
+      "n_kc": 6,
+      "difficulty": "중",
+      "requirement": "Write a function in Java that implements the following logic: You are driving a little too fast, and a police officer stops you. Write code to compute the result, encoded as an int value: 0=no ticket, 1=small ticket, or 2=big ticket. If speed is 60 or less, the result is 0. If speed is between 61 and 80 inclusive, the result is 1. If speed is 81 or more, the result is 2. Unless it is your birthday--on that day, your speed can be 5 higher in all cases.",
+      "prerequisite_concept": null
+    },
+    {
+      "problem_id": 17,
+      "assignment_id": 487,
+      "concept_groups": [
+        "조건문"
+      ],
+      "n_kc": 4,
+      "difficulty": "하",
+      "requirement": "Write a function in Java that implements the following logic: You have a red lottery ticket showing ints a, b, and c, each of which is 0, 1, or 2. If they are all the value 2, the result is 10. Otherwise if they are all the same, the result is 5. Otherwise so long as both b and c are different from a, the result is 1. Otherwise the result is 0.",
+      "prerequisite_concept": null
+    },
+    {
+      "problem_id": 34,
+      "assignment_id": 492,
+      "concept_groups": [
+        "조건문",
+        "반복문",
+        "배열/문자열"
+      ],
+      "n_kc": 8,
+      "difficulty": "상",
+      "requirement": "Given a string str, find all places where a three-letter combination starting with \"z\" and ending with \"p\" occurs. Return a string where for all such three-letter sequences, the middle letter has been removed. For example, a string like \"zipXzap\" would produce a result of \"zpXzp\".",
+      "prerequisite_concept": "조건문"
+    },
+    {
+      "problem_id": 37,
+      "assignment_id": 492,
+      "concept_groups": [
+        "조건문",
+        "배열/문자열"
+      ],
+      "n_kc": 6,
+      "difficulty": "중",
+      "requirement": "Given two strings, return true if either of the strings appears at the very end of the other string, ignoring upper/lower case differences (in other words, the computation should not be \"case sensitive\"). Note: str.toLowerCase() returns the lowercase version of a string.",
+      "prerequisite_concept": "조건문"
+    },
+    {
+      "problem_id": 39,
+      "assignment_id": 492,
+      "concept_groups": [
+        "조건문",
+        "반복문",
+        "배열/문자열"
+      ],
+      "n_kc": 6,
+      "difficulty": "중",
+      "requirement": "We'll say that a string is xy-balanced if for all the 'x' characterss in the string, there exists a 'y' character somewhere later in the string. So \"xxy\" is balanced, but \"xyx\" is not. One 'y' can balance multiple 'x's. Return true if the given string is xy-balanced.",
+      "prerequisite_concept": "조건문"
+    },
+    {
+      "problem_id": 40,
+      "assignment_id": 492,
+      "concept_groups": [
+        "조건문",
+        "반복문",
+        "배열/문자열"
+      ],
+      "n_kc": 7,
+      "difficulty": "상",
+      "requirement": "A sandwich is two pieces of bread with something in between. Write a Java method that takes in a string str and returns the string that is between the first and last appearance of \"bread\" in str. Return the empty string \"\" if there are not two pieces of bread.",
+      "prerequisite_concept": "조건문"
+    },
+    {
+      "problem_id": 46,
+      "assignment_id": 494,
+      "concept_groups": [
+        "조건문",
+        "반복문",
+        "배열/문자열"
+      ],
+      "n_kc": 5,
+      "difficulty": "중",
+      "requirement": "We'll say that a value is \"everywhere\" in an array if for every pair of adjacent elements in the array, at least one of the pair is that value. Return true if the given value is everywhere in the array.",
+      "prerequisite_concept": "조건문"
+    },
+    {
+      "problem_id": 71,
+      "assignment_id": 502,
+      "concept_groups": [
+        "조건문",
+        "반복문",
+        "배열/문자열"
+      ],
+      "n_kc": 5,
+      "difficulty": "중",
+      "requirement": "Given a non-empty array, return true if there is a place to split the array so that the sum of the numbers on one side is equal to the sum of the numbers on the other side.",
+      "prerequisite_concept": "조건문"
+    }
+  ],
+  "concept_prerequisites": {
+    "조건문": null,
+    "반복문": "조건문",
+    "배열/문자열": "조건문"
+  },
+  "difficulty_rule": {
+    "basis": "n_kc(Real_50Problems KC 원-핫 컬럼 중 활성화된 개수)",
+    "low_max_n_kc": 4,
+    "high_min_n_kc": 7
+  },
+  "selection_note": "Real_17_TestCased 17개 중 복수 개념군 문항 전부 + 단일 개념군(조건문) 문항 ProblemID 오름차순 상위 6개 = 12개 선정. 제외된 ProblemID: [20, 21, 22, 24, 25]"
+}

@@ -1,6 +1,8 @@
 .env
-data/raw/
+data/raw
 results/raw/
 *.pkl
 *.pt
 *.ckpt
+__pycache__/
+.pytest_cache/
