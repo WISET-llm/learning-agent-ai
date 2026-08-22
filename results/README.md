@@ -3,7 +3,9 @@
 ## 모듈 ①·② 제출 분석 · 취약 개념 추정
 
 ### 파일 구성
-- `pipeline.py` — 전체 파이프라인 코드 (Colab/로컬 모두 실행 가능)
+- `src/submission_analysis/submission_analysis.py` — ①제출 분석 모듈 코드
+- `src/weak_concept/weak_concept.py` — ②취약 개념 추정 모듈 코드 + Macro-F1 평가
+- `src/pipeline.py` — 위 두 모듈(및 ③모듈)을 순서대로 실행하는 오케스트레이터
 - `module1_output.json` — ①제출 분석 모듈 출력 (90건 전체)
 - `module2_output.json` — ②취약 개념 추정 모듈 출력 (학생 6명)
 - `evaluation_report.json` — Macro-F1 평가 결과
@@ -12,9 +14,11 @@
 ```bash
 pip install pandas numpy scikit-learn openpyxl
 apt-get install default-jdk   # javac 필요 (컴파일 판정용)
-python3 pipeline.py
+python3 src/pipeline.py       # 저장소 루트에서 실행 (data/, results/ 상대경로를 그대로 사용)
 ```
-`모듈1_2용_데이터셋.xlsx`가 같은 폴더에 있어야 합니다.
+`data/raw/모듈1_2용_데이터셋.xlsx`가 있으면 모듈①②를 처음부터 실행하고, 없으면(이 저장소
+기본 상태) 이미 커밋된 `module1_output.json`·`module2_output.json`을 재사용해 곧바로
+모듈③까지 이어서 실행합니다.
 
 ### 결과 요약
 - 90건 중 **32건 컴파일 실패** (문법 오류·미완성 코드 포함, 실제 데이터 특성상 많음)
@@ -35,20 +39,22 @@ python3 pipeline.py
 ## 모듈 ③ 보완 문제 추천
 
 ### 파일 구성
-- `src/module3_recommend.py` — 문항 메타 테이블 구축 + 추천 로직 + 베이스라인 3종 + 평가
-  (모듈①②와 입력 데이터셋이 달라 `pipeline.py`와 파일을 분리했고, 개념별 취약도 계산 함수는
-  `pipeline.py`의 것을 그대로 import해서 재사용합니다)
+- `src/recommender/recommender.py` — 문항 메타 테이블 구축 + 추천 로직 + 베이스라인 3종 + 평가
+  (모듈①②와 입력 데이터셋이 달라 별도 패키지로 분리했고, 개념별 취약도 계산 함수는
+  `weak_concept` 모듈 것을 그대로 import해서 재사용합니다)
 - `data/problem_meta.json` — 파일럿 12문항의 난이도·선수개념·개념군 메타 테이블 (새로 생성)
 - `module3_output.json` — `module2_output.json`의 학생별 `weakest_concept` 기준 추천 결과
 - `module3_evaluation.json` — hold-out 평가 결과 (제안 시스템 vs 베이스라인 3종)
-- `tests/test_module3_recommend.py` — pytest 단위 테스트 15건
+- `tests/test_recommender.py` — pytest 단위 테스트 15건
 
 ### 실행 방법
 ```bash
 pip install pandas numpy scikit-learn openpyxl pytest
-python3 src/module3_recommend.py   # 저장소 루트에서 실행 (data/, results/ 상대경로를 그대로 사용)
-pytest tests/test_module3_recommend.py -v
+python3 src/pipeline.py                 # 모듈①②③ 전체 실행 (또는 아래처럼 ③만 단독 실행)
+python3 src/recommender/recommender.py  # 저장소 루트 기준 절대경로를 쓰므로 어디서 실행해도 됨
+pytest tests/test_recommender.py -v
 ```
+`data/raw/모듈3_4용_데이터셋.xlsx`가 필요합니다(Real_50Problems·Real_17_TestCased 시트).
 
 ### 문항 메타데이터 테이블 구축 규칙
 - **파일럿 문항 선정 (17개 중 12개)**: Real_17_TestCased 중 복수 개념군 문항(조건문+반복문+배열/문자열

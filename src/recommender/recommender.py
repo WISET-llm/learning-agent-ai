@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 """
 모듈 ③ 보완 문제 추천 파이프라인
-입력: data/모듈3_4용_데이터셋.xlsx (Real_50Problems, Real_17_TestCased)
+입력: data/raw/모듈3_4용_데이터셋.xlsx (Real_50Problems, Real_17_TestCased)
       results/module1_output.json (학생별 제출 이력 재구성 — hold-out 평가용)
       results/module2_output.json (weakest_concept, concept_scores)
 출력: data/problem_meta.json, results/module3_output.json, results/module3_evaluation.json
 
-pipeline.py(모듈 ①②)와 다른 입력 데이터셋을 사용하므로 파일을 분리했으며,
-개념별 취약도 계산 로직(compute_concept_scores 등)은 pipeline.py 것을 그대로 재사용한다.
+모듈 ①②(submission_analysis/weak_concept)와 다른 입력 데이터셋을 사용하므로 패키지를
+분리했으며, 개념별 취약도 계산 로직(compute_concept_scores 등)은 weak_concept 모듈 것을
+그대로 재사용한다.
 """
 
 import hashlib
@@ -18,11 +19,11 @@ import sys
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from pipeline import compute_concept_scores, split_concepts  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "weak_concept"))
+from weak_concept import compute_concept_scores, split_concepts  # noqa: E402
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_PATH = os.path.join(ROOT, "data", "모듈3_4용_데이터셋.xlsx")
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA_PATH = os.path.join(ROOT, "data", "raw", "모듈3_4용_데이터셋.xlsx")
 MODULE1_OUTPUT_PATH = os.path.join(ROOT, "results", "module1_output.json")
 MODULE2_OUTPUT_PATH = os.path.join(ROOT, "results", "module2_output.json")
 PROBLEM_META_PATH = os.path.join(ROOT, "data", "problem_meta.json")

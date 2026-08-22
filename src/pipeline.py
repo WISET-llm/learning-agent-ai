@@ -1,252 +1,73 @@
 # -*- coding: utf-8 -*-
 """
-모듈 ①(제출 분석) · ②(취약 개념 추정) 파이프라인
-입력: 모듈1_2용_데이터셋.xlsx (StudentSubmissions, ConceptTags)
-출력: module1_output.json, module2_output.json, evaluation_report.json
+전체 파이프라인 오케스트레이터 — 모듈 ①→②→③을 순서대로 실행한다.
+모듈별 실제 로직은 아래 패키지에 있고, 이 파일은 그것들을 불러와 순서대로 실행하고
+results/·data/ 아래에 산출물을 저장하는 역할만 한다.
+  - src/submission_analysis/ — ① 제출 분석 (컴파일 판정 + 실패 패턴 태깅)
+  - src/weak_concept/        — ② 취약 개념 추정
+  - src/recommender/         — ③ 보완 문제 추천
+  - src/feedback/            — ④ 개념카드·LLM 피드백 (아직 미구현)
+
+입력: data/raw/모듈1_2용_데이터셋.xlsx, data/raw/모듈3_4용_데이터셋.xlsx
+출력: results/module1_output.json, results/module2_output.json, results/evaluation_report.json,
+      data/problem_meta.json, results/module3_output.json, results/module3_evaluation.json
+
+주의: data/raw/모듈1_2용_데이터셋.xlsx는 이 저장소에 커밋돼 있지 않을 수 있다(이미
+module1/2_output.json으로 처리되어 원본 파일만 별도 보관 중일 가능성). 그 경우
+모듈①②를 새로 돌리는 대신 기존 results/module1_output.json, module2_output.json을
+그대로 재사용해 모듈③까지 이어서 실행한다.
 """
 
-import ast
 import json
 import os
-import subprocess
-import tempfile
+import sys
 
-import numpy as np
-import pandas as pd
-from sklearn.metrics import f1_score, precision_score, recall_score
+_SRC_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(_SRC_DIR)
+for _pkg in ("submission_analysis", "weak_concept", "recommender"):
+    sys.path.insert(0, os.path.join(_SRC_DIR, _pkg))
 
-DATA_PATH = "모듈1_2용_데이터셋.xlsx"
+from submission_analysis import build_module1_output, load_data  # noqa: E402
+from weak_concept import build_module2_output, evaluate_macro_f1, tune_hyperparams  # noqa: E402
+from recommender import (  # noqa: E402
+    build_module3_output,
+    build_problem_concept_map,
+    build_problem_meta,
+    evaluate_recommenders,
+    load_problem_pool,
+)
 
-# ---------------------------------------------------------------------------
-# 0. 데이터 로드
-# ---------------------------------------------------------------------------
+MODULE1_2_DATA_PATH = os.path.join(ROOT, "data", "raw", "모듈1_2용_데이터셋.xlsx")
+MODULE3_4_DATA_PATH = os.path.join(ROOT, "data", "raw", "모듈3_4용_데이터셋.xlsx")
 
-def load_data(path=DATA_PATH):
-    df = pd.read_excel(path, sheet_name="StudentSubmissions")
-    df["binary_score"] = df["binary_score"].apply(ast.literal_eval)
-    df["개념군_매핑"] = df["개념군_매핑"].astype(str)
-    return df
-
-
-# ---------------------------------------------------------------------------
-# 1. 모듈 ① — 제출 분석 (컴파일 판정 + 실패 패턴 태깅)
-# ---------------------------------------------------------------------------
-
-def check_compile(code: str):
-    """Java 코드 컴파일 시도. (성공여부, stderr) 반환."""
-    wrapped = f"class Solution {{\n{code}\n}}"
-    with tempfile.TemporaryDirectory() as d:
-        path = os.path.join(d, "Solution.java")
-        with open(path, "w") as f:
-            f.write(wrapped)
-        try:
-            result = subprocess.run(
-                ["javac", "-d", d, path],
-                capture_output=True,
-                text=True,
-                timeout=10,
-            )
-        except subprocess.TimeoutExpired:
-            return False, "TIMEOUT"
-        return result.returncode == 0, result.stderr
+MODULE1_OUTPUT_PATH = os.path.join(ROOT, "results", "module1_output.json")
+MODULE2_OUTPUT_PATH = os.path.join(ROOT, "results", "module2_output.json")
+EVAL_REPORT_PATH = os.path.join(ROOT, "results", "evaluation_report.json")
+PROBLEM_META_PATH = os.path.join(ROOT, "data", "problem_meta.json")
+MODULE3_OUTPUT_PATH = os.path.join(ROOT, "results", "module3_output.json")
+MODULE3_EVAL_PATH = os.path.join(ROOT, "results", "module3_evaluation.json")
 
 
-def tag_error_pattern(binary_score, compile_ok: bool, stderr: str) -> str:
-    """컴파일/실행 결과를 규칙 기반으로 태깅."""
-    if not compile_ok:
-        low = stderr.lower()
-        if "missing return statement" in low:
-            return "helper_function_missing_return"
-        if "cannot find symbol" in low:
-            return "undeclared_variable_or_method"
-        if "incompatible types" in low:
-            return "type_mismatch"
-        if "reached end of file while parsing" in low or "illegal start" in low:
-            return "syntax_error_unbalanced"
-        if "';' expected" in low:
-            return "syntax_error_missing_semicolon"
-        return "compile_error_other"
-
-    n_total = len(binary_score)
-    n_failed = binary_score.count(0)
-    if n_failed == 0:
-        return "all_passed"
-    if n_failed == n_total:
-        return "all_tests_failed_logic"
-    return "partial_failure_logic"
-
-
-def build_module1_output(df: pd.DataFrame):
-    """행 단위로 ①모듈 JSON 출력을 생성. 컴파일 캐시로 중복 코드 재컴파일 방지."""
-    outputs = []
-    compile_cache = {}
-    for _, row in df.iterrows():
-        code = row["Code"]
-        if code not in compile_cache:
-            compile_cache[code] = check_compile(code)
-        compile_ok, stderr = compile_cache[code]
-
-        n_total = len(row["binary_score"])
-        n_failed = row["binary_score"].count(0)
-
-        outputs.append(
-            {
-                "subject_id": row["SubjectID"],
-                "problem_id": int(row["ProblemID"]),
-                "timestep": int(row["timestep"]),
-                "compile_ok": bool(compile_ok),
-                "test_pass_rate": float(row["Score"]),
-                "n_failed": int(n_failed),
-                "n_total": int(n_total),
-                "error_pattern": tag_error_pattern(row["binary_score"], compile_ok, stderr),
-            }
-        )
-    return outputs
-
-
-# ---------------------------------------------------------------------------
-# 2. 모듈 ② — 취약 개념 추정
-# ---------------------------------------------------------------------------
-
-MIN_ATTEMPTS = 2       # 신뢰할 만한 점수로 인정할 최소 시도 수
-DECAY = 0.7            # 시간 가중 감쇠율 (최근 시도일수록 가중치 큼)
-WEAK_THRESHOLD = 0.5   # 취약 판정 기준 (평가용)
-
-
-def split_concepts(tag: str):
-    return [c.strip() for c in tag.split(",") if c.strip()]
-
-
-def compute_concept_scores(subject_df: pd.DataFrame, decay: float = DECAY):
-    """한 학생의 제출 이력(subject_df)으로 개념별 취약도(0~1) 산출.
-    시도 횟수가 MIN_ATTEMPTS 미만인 개념은 None(insufficient_data)."""
-    subject_df = subject_df.sort_values("timestep")
-    max_t = subject_df["timestep"].max()
-
-    concept_records = {}
-    for _, row in subject_df.iterrows():
-        weight = decay ** (max_t - row["timestep"])
-        for c in split_concepts(row["개념군_매핑"]):
-            concept_records.setdefault(c, []).append((weight, row["Score"]))
-
-    scores = {}
-    for concept, records in concept_records.items():
-        if len(records) < MIN_ATTEMPTS:
-            scores[concept] = None
-            continue
-        weights = np.array([w for w, _ in records])
-        pass_rates = np.array([p for _, p in records])
-        weighted_pass_rate = float(np.average(pass_rates, weights=weights))
-        scores[concept] = round(1 - weighted_pass_rate, 3)
-
-    return scores
-
-
-def build_module2_output(df: pd.DataFrame):
-    results = []
-    for sid in df["SubjectID"].unique():
-        sub_df = df[df["SubjectID"] == sid]
-        scores = compute_concept_scores(sub_df)
-        valid = {k: v for k, v in scores.items() if v is not None}
-        weakest = max(valid, key=valid.get) if valid else None
-        results.append(
-            {
-                "subject_id": sid,
-                "concept_scores": scores,
-                "weakest_concept": weakest,
-                "n_submissions": int(len(sub_df)),
-            }
-        )
-    return results
-
-
-# ---------------------------------------------------------------------------
-# 3. 평가 — hold-out 방식 Macro-F1 (목표: 0.65 이상)
-# ---------------------------------------------------------------------------
-
-def evaluate_macro_f1(df: pd.DataFrame, decay: float = DECAY, threshold: float = WEAK_THRESHOLD):
-    """학생별 마지막 시도를 정답 라벨용으로 숨기고, 그 이전 이력만으로
-    예측한 취약도가 마지막 시도의 실제 실패 여부를 맞히는지 평가."""
-    y_true, y_pred = [], []
-    per_student = []
-
-    for sid in df["SubjectID"].unique():
-        sub_df = df[df["SubjectID"] == sid].sort_values("timestep")
-        if len(sub_df) < 3:
-            continue
-        last_row = sub_df.iloc[-1]
-        history = sub_df.iloc[:-1]
-
-        scores = compute_concept_scores(history, decay=decay)
-        concepts = split_concepts(last_row["개념군_매핑"])
-
-        student_true, student_pred = [], []
-        for c in concepts:
-            if scores.get(c) is None:
-                continue
-            predicted_weak = scores[c] >= threshold
-            actual_failed = last_row["Score"] < 1.0
-            y_true.append(actual_failed)
-            y_pred.append(predicted_weak)
-            student_true.append(actual_failed)
-            student_pred.append(predicted_weak)
-
-        per_student.append(
-            {
-                "subject_id": sid,
-                "n_evaluated_concepts": len(student_true),
-            }
-        )
-
-    if not y_true:
-        return {"macro_f1": None, "n_eval_points": 0, "note": "평가 가능한 샘플 없음"}
-
-    return {
-        "macro_f1": round(f1_score(y_true, y_pred, average="macro"), 4),
-        "precision": round(precision_score(y_true, y_pred, average="macro", zero_division=0), 4),
-        "recall": round(recall_score(y_true, y_pred, average="macro", zero_division=0), 4),
-        "n_eval_points": len(y_true),
-        "decay": decay,
-        "threshold": threshold,
-    }
-
-
-def tune_hyperparams(df: pd.DataFrame):
-    """decay, threshold 그리드서치로 Macro-F1 최대화."""
-    best = None
-    for decay in [0.5, 0.6, 0.7, 0.8, 0.9, 1.0]:
-        for threshold in [0.2, 0.3, 0.4, 0.5, 0.6]:
-            result = evaluate_macro_f1(df, decay=decay, threshold=threshold)
-            if result["macro_f1"] is None:
-                continue
-            if best is None or result["macro_f1"] > best["macro_f1"]:
-                best = result
-    return best
-
-
-# ---------------------------------------------------------------------------
-# 4. 실행
-# ---------------------------------------------------------------------------
-
-def main():
-    print("[1/5] 데이터 로드 중...")
-    df = load_data()
+def run_module1_2():
+    """모듈 ①②를 원본 데이터로 처음부터 실행. 반환: (module1_outputs, module2_outputs)."""
+    print("[1/7] 모듈①②용 데이터 로드 중...")
+    df = load_data(MODULE1_2_DATA_PATH)
     print(f"  총 {len(df)}건 제출, 학생 {df['SubjectID'].nunique()}명")
 
-    print("[2/5] 모듈 ① 실행 중 (Java 컴파일 검사 포함, 시간이 걸릴 수 있음)...")
+    print("[2/7] 모듈 ① 실행 중 (Java 컴파일 검사 포함, 시간이 걸릴 수 있음)...")
     module1_outputs = build_module1_output(df)
-    with open("module1_output.json", "w", encoding="utf-8") as f:
+    with open(MODULE1_OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(module1_outputs, f, ensure_ascii=False, indent=2)
     n_compile_fail = sum(1 for o in module1_outputs if not o["compile_ok"])
     print(f"  완료: {len(module1_outputs)}건 처리, 컴파일 실패 {n_compile_fail}건")
 
-    print("[3/5] 모듈 ② 실행 중...")
+    print("[3/7] 모듈 ② 실행 중...")
     module2_outputs = build_module2_output(df)
-    with open("module2_output.json", "w", encoding="utf-8") as f:
+    with open(MODULE2_OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(module2_outputs, f, ensure_ascii=False, indent=2)
     print(f"  완료: 학생 {len(module2_outputs)}명 취약도 산출")
 
-    print("[4/5] 하이퍼파라미터 튜닝 및 평가 중...")
+    print("[4/7] 모듈② 하이퍼파라미터 튜닝 및 평가 중...")
     default_eval = evaluate_macro_f1(df)
     best_eval = tune_hyperparams(df)
     evaluation_report = {
@@ -255,12 +76,62 @@ def main():
         "target_macro_f1": 0.65,
         "target_achieved": bool(best_eval and best_eval["macro_f1"] >= 0.65),
     }
-    with open("evaluation_report.json", "w", encoding="utf-8") as f:
+    with open(EVAL_REPORT_PATH, "w", encoding="utf-8") as f:
         json.dump(evaluation_report, f, ensure_ascii=False, indent=2)
     print(f"  기본 파라미터 Macro-F1: {default_eval.get('macro_f1')}")
     print(f"  최적 파라미터 Macro-F1: {best_eval.get('macro_f1') if best_eval else None}")
 
-    print("[5/5] 완료. module1_output.json / module2_output.json / evaluation_report.json 생성됨")
+    return module1_outputs, module2_outputs
+
+
+def reuse_module1_2_outputs():
+    """원본 데이터셋이 없을 때, 이미 저장소에 커밋된 결과를 그대로 불러온다."""
+    print("[1-4/7] data/raw/모듈1_2용_데이터셋.xlsx가 없어 모듈①②를 건너뛰고 "
+          "기존 results/module1_output.json · module2_output.json을 재사용합니다.")
+    with open(MODULE1_OUTPUT_PATH, encoding="utf-8") as f:
+        module1_outputs = json.load(f)
+    with open(MODULE2_OUTPUT_PATH, encoding="utf-8") as f:
+        module2_outputs = json.load(f)
+    print(f"  제출 이력 {len(module1_outputs)}건, 학생 {len(module2_outputs)}명 로드")
+    return module1_outputs, module2_outputs
+
+
+def run_module3(module1_outputs, module2_outputs):
+    print("[5/7] 모듈③ 문항 메타데이터 테이블 구축 중...")
+    problem_meta_bundle = build_problem_meta(MODULE3_4_DATA_PATH)
+    with open(PROBLEM_META_PATH, "w", encoding="utf-8") as f:
+        json.dump(problem_meta_bundle, f, ensure_ascii=False, indent=2)
+    print(f"  완료: 파일럿 문항 {len(problem_meta_bundle['problems'])}개")
+
+    print("[6/7] 모듈 ③ 추천 실행 중...")
+    module3_outputs = build_module3_output(
+        module1_outputs, module2_outputs,
+        problem_meta_bundle["problems"], problem_meta_bundle["concept_prerequisites"],
+    )
+    with open(MODULE3_OUTPUT_PATH, "w", encoding="utf-8") as f:
+        json.dump(module3_outputs, f, ensure_ascii=False, indent=2)
+    print(f"  완료: 학생 {len(module3_outputs)}명 추천 생성")
+
+    print("[7/7] 모듈③ hold-out 평가 실행 중 (제안 시스템 vs 베이스라인 3종)...")
+    full_concept_map = build_problem_concept_map(load_problem_pool(MODULE3_4_DATA_PATH))
+    evaluation = evaluate_recommenders(module1_outputs, problem_meta_bundle, full_concept_map)
+    with open(MODULE3_EVAL_PATH, "w", encoding="utf-8") as f:
+        json.dump(evaluation, f, ensure_ascii=False, indent=2)
+    print(f"  평가 포인트 {evaluation['n_eval_points']}개")
+    for m, s in evaluation["methods"].items():
+        print(f"  {m}: Recall@1={s['recall@1']} Recall@3={s['recall@3']} NDCG@3={s['ndcg@3']}")
+    print(f"  목표(Recall@3>=0.70) 달성 여부: {evaluation['target_achieved']}")
+
+
+def main():
+    if os.path.exists(MODULE1_2_DATA_PATH):
+        module1_outputs, module2_outputs = run_module1_2()
+    else:
+        module1_outputs, module2_outputs = reuse_module1_2_outputs()
+
+    run_module3(module1_outputs, module2_outputs)
+
+    print("완료. results/ · data/ 아래 산출물이 모두 생성되었습니다.")
 
 
 if __name__ == "__main__":

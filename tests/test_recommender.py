@@ -4,11 +4,12 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "src"))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "src", "recommender"))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "src", "weak_concept"))
 
 import numpy as np
 
-from module3_recommend import (
+from recommender import (
     derive_concept_prerequisites,
     ndcg_at_k,
     recall_at_k,
