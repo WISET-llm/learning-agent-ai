@@ -1,0 +1,61 @@
+{
+  "module2": {
+    "default_params": {
+      "macro_f1": 0.7778,
+      "precision": 0.75,
+      "recall": 0.9,
+      "n_eval_points": 18,
+      "decay": 0.7,
+      "threshold": 0.5
+    },
+    "best_params": {
+      "macro_f1": 0.7778,
+      "precision": 0.75,
+      "recall": 0.9,
+      "n_eval_points": 18,
+      "decay": 0.5,
+      "threshold": 0.4
+    },
+    "target_macro_f1": 0.65,
+    "target_achieved": true,
+    "_source": "원본 데이터셋 없음 — 기존 results/evaluation_report.json 재사용"
+  },
+  "module3": {
+    "n_total_transition_points": 78,
+    "n_skipped_true_label_outside_pilot_pool": 21,
+    "n_eval_points": 57,
+    "methods": {
+      "proposed": {
+        "recall@1": 0.4211,
+        "recall@3": 0.7193,
+        "ndcg@3": 0.5794
+      },
+      "random": {
+        "recall@1": 0.2632,
+        "recall@3": 0.5789,
+        "ndcg@3": 0.4486
+      },
+      "by_difficulty": {
+        "recall@1": 0.4561,
+        "recall@3": 0.8596,
+        "ndcg@3": 0.7015
+      },
+      "by_pass_rate": {
+        "recall@1": 0.3333,
+        "recall@3": 0.7018,
+        "ndcg@3": 0.5405
+      }
+    },
+    "target_recall@3": 0.7,
+    "target_achieved": true
+  },
+  "module4": {
+    "error": "평가 불가 — ANTHROPIC_API_KEY 없음, 기존 module4_evaluation.json도 없음"
+  },
+  "summary": {
+    "module2_target_achieved": true,
+    "module3_target_achieved": true,
+    "module4_target_achieved": null,
+    "all_targets_achieved": null
+  }
+}

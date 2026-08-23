@@ -1,4 +1,4 @@
-# 모듈 ①·②·③·④ 실행 결과
+# 모듈 ①·②·③·④ 실행 결과 · 통합 파이프라인(E2E)
 
 ## 모듈 ①·② 제출 분석 · 취약 개념 추정
 
@@ -209,3 +209,72 @@ pytest tests/test_feedback.py -v      # API 키 없이도 통과함 (전부 목 
 `ANTHROPIC_API_KEY`를 설정하고 `python3 src/feedback/feedback.py`를 실행해 실제 결과를
 생성한 뒤, 정답 노출 비율이 목표(10% 이하)를 달성하는지 확인하고 이 섹션의 "결과 요약"을
 실측치로 갱신해야 합니다.
+
+---
+
+## 전체 파이프라인 실행 방법 (모듈 ①→②→③→④ 통합, E2E)
+
+### 파일 구성
+- `src/e2e_pipeline.py` — 학생 제출 1건을 모듈①→②→③→④ 순서로 메모리상에서 체이닝하는
+  `run_pipeline()` 단일 진입 함수 + 배치 재생(`run_batch`) + 통합 평가(`build_e2e_evaluation_report`)
+- `results/e2e_output.json` — `module1_output.json`의 전체 제출 이력(90건)을 학생별
+  timestep 순으로 재생한 결과 (아래 결과 요약 참고)
+- `results/e2e_evaluation_report.json` — 모듈②③④ 개별 평가를 하나로 합친 리포트
+- `tests/test_e2e_pipeline.py` — pytest 통합 테스트 4건
+
+### 실행 방법
+```bash
+pip install pandas numpy scikit-learn openpyxl anthropic pytest
+export ANTHROPIC_API_KEY=sk-ant-...        # 모듈④까지 실제로 호출하려면 필요 (없어도 죽지 않음)
+python3 src/e2e_pipeline.py                # 배치 실행 (results/e2e_output.json, e2e_evaluation_report.json 생성)
+python3 src/e2e_pipeline.py --limit 20     # 모듈④ LLM 호출 비용을 제한하고 싶을 때
+pytest tests/test_e2e_pipeline.py -v       # 통합 테스트 (API 키 없이 통과, javac는 필요)
+```
+필요한 데이터: `results/module1_output.json`(이미 커밋됨), `data/problem_meta.json`(모듈③
+산출물, 이미 커밋됨), `data/concept_cards.json`(이미 커밋됨), `data/raw/모듈3_4용_데이터셋.xlsx`
+(평가 리포트의 모듈③ 재계산용). 예상 실행 시간: 이 저장소 기준(제출 90건, 컴파일 재실행 없음)
+API 키 없이 수 초, API 키가 있으면 모듈④가 학생당 최대 2회 Claude를 호출하므로 호출 대상
+건수 × 왕복 지연시간만큼 늘어납니다.
+
+### 결과 요약
+`results/e2e_output.json`(90건) 중 **4건이 4개 모듈을 모두 성공적으로 통과**했고(`status: "ok"`),
+**86건은 모듈④에서 `ANTHROPIC_API_KEY`가 없어 실패**로 기록됐습니다(`status: "partial_failure"`,
+`module4.error`에 원인 명시, 프로세스는 죽지 않고 다음 제출로 계속 진행). 성공한 4건은 모두
+파일럿 12문항을 이미 다 푼 시점 이후의 제출이라 모듈④가 LLM 없이 정형 문구(`NO_CANDIDATE_FEEDBACK`)
+로 처리된 경우입니다 — 즉 API 키 없이도 "4개 모듈을 모두 거친 완전한 결과"가 실제로 나온다는
+것을 확인했지만, 취약 개념이 있고 추천 문제가 있는 정상 케이스의 실제 LLM 피드백은 API 키가
+있어야 나옵니다. `results/e2e_evaluation_report.json`은 모듈②(Macro-F1 0.7778, 목표 달성)·
+모듈③(Recall@3 0.7193, 목표 달성)은 기존 산출물을 재사용/재계산해 채웠고, 모듈④는
+`ANTHROPIC_API_KEY`가 없어 `target_achieved: null`로 남아 있습니다.
+
+### 통합 시 발견된 이슈
+1. **컬럼명 컨벤션 불일치**: `new_submission`은 원본 데이터 컨벤션(`Code`, `binary_score`,
+   `ProblemID`, PascalCase)을 쓰지만 모듈①②③ 내부는 `problem_id`/`test_pass_rate` 같은
+   snake_case를 씁니다. `_normalize_submission()`에서 흡수했고, 모듈 코드는 수정하지
+   않았습니다.
+2. **모듈②가 필요로 하는 개념 태그가 모듈①출력에는 없음**: `compute_concept_scores`는 제출
+   행마다 `개념군_매핑` 태그가 있어야 하는데, `module1_output.json` 스키마에는 이 태그가
+   전혀 없습니다(원래 별도 `ConceptTags`/`개념군_매핑` 컬럼에서 왔습니다). `_history_to_concept_df()`
+   가 `problem_meta`의 `concept_groups`로 `problem_id → 개념 태그` 역매핑을 만들어 메웠습니다.
+   다만 `problem_meta`(파일럿 12문항)에 없는 문제(제외된 5개 조건문 단독 문항 등)는 개념
+   신호가 소실됩니다 — 모듈③ 자체 평가(`recommender.py`)는 별도의 "전체 17문항 concept map"
+   으로 이 문제를 우회했지만, `run_pipeline`은 `problem_meta` 인자 하나만 받는 요청 스펙이라
+   같은 우회를 적용할 채널이 없습니다. **다음 팀원이 볼 점**: 전체 문항의 concept map을 별도
+   테이블로 유지하거나, `run_pipeline`에 옵션 인자를 추가하는 것을 검토하면 좋겠습니다.
+3. **`timestep`이 `new_submission` 스펙에 없음**: 모듈②가 시간 가중치 계산에 `timestep`을
+   필수로 요구하는데, 요청된 `new_submission` 스키마에는 없습니다. 이력의 마지막 `timestep+1`을
+   자동 배정해 "가장 최근 제출"로 간주했습니다(호출자가 명시하면 그 값을 우선).
+4. **모듈③이 두 개의 인자(문항 리스트 + 선수개념 맵)를 기대**: `recommend_problem()`은
+   `problem_meta`(리스트)와 `concept_prerequisites`(dict)를 별도로 받지만, 통합 함수
+   스펙은 `problem_meta` 하나뿐입니다. `data/problem_meta.json`과 같은 번들 구조
+   (`{"problems": [...], "concept_prerequisites": {...}}`)라고 간주하고 내부에서 분리했습니다.
+5. **배치 재생 모드에는 원본 코드가 없음**: `results/module1_output.json`에는 컴파일
+   판정에 필요한 원본 `Code`/`binary_score`가 없습니다(원본 `data/raw/모듈1_2용_데이터셋.xlsx`가
+   이 저장소에 없음 — 모듈①② 섹션 참고). 그래서 배치 모드에서는 모듈①을 실제로 재컴파일하지
+   않고 이미 계산된 결과를 그대로 재사용합니다. `run_pipeline`은 `new_submission`에 `Code`
+   키가 있는지로 두 모드를 자동 판별합니다 — 원본 xlsx가 있는 환경에서 raw 제출을 넘기면
+   모듈①이 실제로 재실행됩니다.
+6. **모듈④ 목표 검증은 API 키에 의존적**: 위 결과 요약대로, `ANTHROPIC_API_KEY`가 없는
+   환경에서는 정답 노출 비율을 실측할 수 없습니다. `build_e2e_evaluation_report()`는 키가
+   없으면 기존 `results/module4_evaluation.json`을 재사용하도록 폴백을 넣었지만, 이 파일도
+   아직 없어 `module4.target_achieved`는 `null`입니다.
