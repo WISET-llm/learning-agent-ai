@@ -1,0 +1,2596 @@
+[
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 13,
+      "timestep": 0,
+      "compile_ok": true,
+      "test_pass_rate": 0.695652,
+      "n_failed": 7,
+      "n_total": 23,
+      "error_pattern": "partial_failure_logic"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": null
+      },
+      "weakest_concept": null
+    },
+    "module3": {
+      "recommended_problem_id": 1,
+      "recommendation_type": "fallback_any_unsolved",
+      "reason": "동일/선수 개념 후보가 모두 소진되어 파일럿 풀 내 미해결 문제로 대체 추천"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 5,
+      "timestep": 1,
+      "compile_ok": true,
+      "test_pass_rate": 0.875,
+      "n_failed": 1,
+      "n_total": 8,
+      "error_pattern": "partial_failure_logic"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.199
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 3,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문)의 유사 난이도 문항 추천 — 최근 통과율 80%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 1,
+      "timestep": 2,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 15,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.108
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 3,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문)의 유사 난이도 문항 추천 — 최근 통과율 89%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 3,
+      "timestep": 3,
+      "compile_ok": true,
+      "test_pass_rate": 0.8125,
+      "n_failed": 3,
+      "n_total": 16,
+      "error_pattern": "partial_failure_logic"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.139
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 12,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문)의 유사 난이도 문항 추천 — 최근 통과율 86%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 12,
+      "timestep": 4,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 20,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.089
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 91%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 24,
+      "timestep": 5,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 22,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.089
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 91%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 25,
+      "timestep": 6,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 21,
+      "n_total": 21,
+      "error_pattern": "compile_error_other"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.089
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 91%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 21,
+      "timestep": 7,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 20,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.089
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 91%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 20,
+      "timestep": 8,
+      "compile_ok": true,
+      "test_pass_rate": 0.785714,
+      "n_failed": 3,
+      "n_total": 14,
+      "error_pattern": "partial_failure_logic"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.089
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 91%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 17,
+      "timestep": 9,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 26,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.028
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 97%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 22,
+      "timestep": 10,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 25,
+      "n_total": 25,
+      "error_pattern": "helper_function_missing_return"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.028
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 97%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 40,
+      "timestep": 11,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 13,
+      "n_total": 13,
+      "error_pattern": "undeclared_variable_or_method"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.594,
+        "반복문": null,
+        "배열/문자열": null
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 41%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 37,
+      "timestep": 12,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 15,
+      "n_total": 15,
+      "error_pattern": "compile_error_other"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.778,
+        "반복문": null,
+        "배열/문자열": 1.0
+      },
+      "weakest_concept": "배열/문자열"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "prerequisite_concept",
+      "reason": "배열/문자열 최근 통과율 0%로 매우 낮아 선수개념(조건문) 문항으로 되돌아감"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 39,
+      "timestep": 13,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 19,
+      "n_total": 19,
+      "error_pattern": "compile_error_other"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.865,
+        "반복문": 1.0,
+        "배열/문자열": 1.0
+      },
+      "weakest_concept": "반복문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "prerequisite_concept",
+      "reason": "반복문 최근 통과율 0%로 매우 낮아 선수개념(조건문) 문항으로 되돌아감"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 34,
+      "timestep": 14,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 14,
+      "n_total": 14,
+      "error_pattern": "undeclared_variable_or_method"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.914,
+        "반복문": 1.0,
+        "배열/문자열": 1.0
+      },
+      "weakest_concept": "반복문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "prerequisite_concept",
+      "reason": "반복문 최근 통과율 0%로 매우 낮아 선수개념(조건문) 문항으로 되돌아감"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 46,
+      "timestep": 15,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 18,
+      "n_total": 18,
+      "error_pattern": "type_mismatch"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.943,
+        "반복문": 1.0,
+        "배열/문자열": 1.0
+      },
+      "weakest_concept": "반복문"
+    },
+    "module3": {
+      "recommended_problem_id": 71,
+      "recommendation_type": "prerequisite_concept",
+      "reason": "반복문 최근 통과율 0%로 매우 낮아 선수개념(조건문) 문항으로 되돌아감"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "04c32d4d95425f73b3a1d6502aed4d48_1",
+    "status": "ok",
+    "module1": {
+      "problem_id": 71,
+      "timestep": 16,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 16,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.635,
+        "반복문": 0.63,
+        "배열/문자열": 0.66
+      },
+      "weakest_concept": "배열/문자열"
+    },
+    "module3": {
+      "recommended_problem_id": null,
+      "recommendation_type": "no_candidate",
+      "reason": "파일럿 문항 풀을 모두 해결하여 추천할 문제가 없음"
+    },
+    "module4": {
+      "feedback_text": "축하해요, 이번 파일럿에 준비된 문제를 모두 풀었어요! 지금까지 배운 개념들을 복습하면서 스스로 비슷한 문제를 만들어보는 것도 좋은 연습이 됩니다.",
+      "direct_answer_leak": false,
+      "judge_reasoning": "파일럿 문항을 모두 해결해 정형 문구를 사용, LLM 미호출"
+    }
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 13,
+      "timestep": 0,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 23,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": null
+      },
+      "weakest_concept": null
+    },
+    "module3": {
+      "recommended_problem_id": 1,
+      "recommendation_type": "fallback_any_unsolved",
+      "reason": "동일/선수 개념 후보가 모두 소진되어 파일럿 풀 내 미해결 문제로 대체 추천"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 5,
+      "timestep": 1,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 8,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 3,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문)의 유사 난이도 문항 추천 — 최근 통과율 100%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 1,
+      "timestep": 2,
+      "compile_ok": true,
+      "test_pass_rate": 0.6,
+      "n_failed": 6,
+      "n_total": 15,
+      "error_pattern": "partial_failure_logic"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.183
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 3,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문)의 유사 난이도 문항 추천 — 최근 통과율 82%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 3,
+      "timestep": 3,
+      "compile_ok": true,
+      "test_pass_rate": 0.75,
+      "n_failed": 4,
+      "n_total": 16,
+      "error_pattern": "partial_failure_logic"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.209
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 12,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문)의 유사 난이도 문항 추천 — 최근 통과율 79%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 12,
+      "timestep": 4,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 20,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.134
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 87%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 24,
+      "timestep": 5,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 22,
+      "n_total": 22,
+      "error_pattern": "undeclared_variable_or_method"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.134
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 87%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 40,
+      "timestep": 6,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 13,
+      "n_total": 13,
+      "error_pattern": "type_mismatch"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.501,
+        "반복문": null,
+        "배열/문자열": null
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 17,
+      "recommendation_type": "same_concept_easy",
+      "reason": "동일 개념(조건문)의 쉬운 문항 추천 — 최근 통과율 50%로 완충 필요"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 37,
+      "timestep": 7,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 15,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.312,
+        "반복문": null,
+        "배열/문자열": 0.412
+      },
+      "weakest_concept": "배열/문자열"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 59%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 39,
+      "timestep": 8,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 19,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.203,
+        "반복문": 0.329,
+        "배열/문자열": 0.224
+      },
+      "weakest_concept": "반복문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 67%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 34,
+      "timestep": 9,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 14,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.135,
+        "반복문": 0.168,
+        "배열/문자열": 0.135
+      },
+      "weakest_concept": "반복문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 83%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "0503bf609757acf2e75aa8cbc0d8323b_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 46,
+      "timestep": 10,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 18,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.092,
+        "반복문": 0.099,
+        "배열/문자열": 0.087
+      },
+      "weakest_concept": "반복문"
+    },
+    "module3": {
+      "recommended_problem_id": 71,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 90%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 13,
+      "timestep": 0,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 23,
+      "n_total": 23,
+      "error_pattern": "undeclared_variable_or_method"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": null
+      },
+      "weakest_concept": null
+    },
+    "module3": {
+      "recommended_problem_id": 1,
+      "recommendation_type": "fallback_any_unsolved",
+      "reason": "동일/선수 개념 후보가 모두 소진되어 파일럿 풀 내 미해결 문제로 대체 추천"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 5,
+      "timestep": 1,
+      "compile_ok": true,
+      "test_pass_rate": 0.625,
+      "n_failed": 3,
+      "n_total": 8,
+      "error_pattern": "partial_failure_logic"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.632
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 1,
+      "recommendation_type": "same_concept_easy",
+      "reason": "동일 개념(조건문)의 쉬운 문항 추천 — 최근 통과율 37%로 완충 필요"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 1,
+      "timestep": 2,
+      "compile_ok": true,
+      "test_pass_rate": 0.466667,
+      "n_failed": 8,
+      "n_total": 15,
+      "error_pattern": "partial_failure_logic"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.587
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 17,
+      "recommendation_type": "same_concept_easy",
+      "reason": "동일 개념(조건문)의 쉬운 문항 추천 — 최근 통과율 41%로 완충 필요"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 3,
+      "timestep": 3,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 16,
+      "n_total": 16,
+      "error_pattern": "syntax_error_unbalanced"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.75
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 17,
+      "recommendation_type": "same_concept_easy",
+      "reason": "동일 개념(조건문)의 쉬운 문항 추천 — 최근 통과율 25%로 완충 필요"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 12,
+      "timestep": 4,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 20,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.48
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 17,
+      "recommendation_type": "same_concept_easy",
+      "reason": "동일 개념(조건문)의 쉬운 문항 추천 — 최근 통과율 52%로 완충 필요"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 40,
+      "timestep": 5,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 13,
+      "n_total": 13,
+      "error_pattern": "undeclared_variable_or_method"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.657,
+        "반복문": null,
+        "배열/문자열": null
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 17,
+      "recommendation_type": "same_concept_easy",
+      "reason": "동일 개념(조건문)의 쉬운 문항 추천 — 최근 통과율 34%로 완충 필요"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 37,
+      "timestep": 6,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 15,
+      "n_total": 15,
+      "error_pattern": "type_mismatch"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.769,
+        "반복문": null,
+        "배열/문자열": 1.0
+      },
+      "weakest_concept": "배열/문자열"
+    },
+    "module3": {
+      "recommended_problem_id": 17,
+      "recommendation_type": "prerequisite_concept",
+      "reason": "배열/문자열 최근 통과율 0%로 매우 낮아 선수개념(조건문) 문항으로 되돌아감"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 39,
+      "timestep": 7,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 19,
+      "n_total": 19,
+      "error_pattern": "undeclared_variable_or_method"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.842,
+        "반복문": 1.0,
+        "배열/문자열": 1.0
+      },
+      "weakest_concept": "반복문"
+    },
+    "module3": {
+      "recommended_problem_id": 17,
+      "recommendation_type": "prerequisite_concept",
+      "reason": "반복문 최근 통과율 0%로 매우 낮아 선수개념(조건문) 문항으로 되돌아감"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 34,
+      "timestep": 8,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 14,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.579,
+        "반복문": 0.511,
+        "배열/문자열": 0.605
+      },
+      "weakest_concept": "배열/문자열"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 40%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 46,
+      "timestep": 9,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 18,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.4,
+        "반복문": 0.3,
+        "배열/문자열": 0.387
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 71,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 60%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "06d801cb636235b298c40029ad9921e7_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 71,
+      "timestep": 10,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 16,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.278,
+        "반복문": 0.189,
+        "배열/문자열": 0.255
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 17,
+      "recommendation_type": "same_concept_easy",
+      "reason": "동일 개념(조건문)의 쉬운 문항 추천 — 최근 통과율 72%로 완충 필요"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 13,
+      "timestep": 0,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 23,
+      "n_total": 23,
+      "error_pattern": "helper_function_missing_return"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": null
+      },
+      "weakest_concept": null
+    },
+    "module3": {
+      "recommended_problem_id": 1,
+      "recommendation_type": "fallback_any_unsolved",
+      "reason": "동일/선수 개념 후보가 모두 소진되어 파일럿 풀 내 미해결 문제로 대체 추천"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 5,
+      "timestep": 1,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 8,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.412
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 1,
+      "recommendation_type": "same_concept_easy",
+      "reason": "동일 개념(조건문)의 쉬운 문항 추천 — 최근 통과율 59%로 완충 필요"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 1,
+      "timestep": 2,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 15,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.224
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 3,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문)의 유사 난이도 문항 추천 — 최근 통과율 78%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 3,
+      "timestep": 3,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 16,
+      "n_total": 16,
+      "error_pattern": "compile_error_other"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.53
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 17,
+      "recommendation_type": "same_concept_easy",
+      "reason": "동일 개념(조건문)의 쉬운 문항 추천 — 최근 통과율 47%로 완충 필요"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 12,
+      "timestep": 4,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 20,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.339
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 66%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 24,
+      "timestep": 5,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 22,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.339
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 66%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 25,
+      "timestep": 6,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 21,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.339
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 66%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 21,
+      "timestep": 7,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 20,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.339
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 66%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 20,
+      "timestep": 8,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 14,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.339
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 66%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 17,
+      "timestep": 9,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 26,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.108
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 89%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 22,
+      "timestep": 10,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 25,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.108
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 89%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 40,
+      "timestep": 11,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 13,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.045,
+        "반복문": null,
+        "배열/문자열": null
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 96%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 37,
+      "timestep": 12,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 15,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.025,
+        "반복문": null,
+        "배열/문자열": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 98%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 39,
+      "timestep": 13,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 19,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.015,
+        "반복문": 0.0,
+        "배열/문자열": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 98%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 34,
+      "timestep": 14,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 14,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.01,
+        "반복문": 0.0,
+        "배열/문자열": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 99%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 46,
+      "timestep": 15,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 18,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.006,
+        "반복문": 0.0,
+        "배열/문자열": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 71,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 99%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07ae4cca3f90a49347ccb5c1a82ff46f_1",
+    "status": "ok",
+    "module1": {
+      "problem_id": 71,
+      "timestep": 16,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 16,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.004,
+        "반복문": 0.0,
+        "배열/문자열": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": null,
+      "recommendation_type": "no_candidate",
+      "reason": "파일럿 문항 풀을 모두 해결하여 추천할 문제가 없음"
+    },
+    "module4": {
+      "feedback_text": "축하해요, 이번 파일럿에 준비된 문제를 모두 풀었어요! 지금까지 배운 개념들을 복습하면서 스스로 비슷한 문제를 만들어보는 것도 좋은 연습이 됩니다.",
+      "direct_answer_leak": false,
+      "judge_reasoning": "파일럿 문항을 모두 해결해 정형 문구를 사용, LLM 미호출"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 13,
+      "timestep": 0,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 23,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": null
+      },
+      "weakest_concept": null
+    },
+    "module3": {
+      "recommended_problem_id": 1,
+      "recommendation_type": "fallback_any_unsolved",
+      "reason": "동일/선수 개념 후보가 모두 소진되어 파일럿 풀 내 미해결 문제로 대체 추천"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 5,
+      "timestep": 1,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 8,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 3,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문)의 유사 난이도 문항 추천 — 최근 통과율 100%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 1,
+      "timestep": 2,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 15,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 3,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문)의 유사 난이도 문항 추천 — 최근 통과율 100%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 3,
+      "timestep": 3,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 16,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 12,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문)의 유사 난이도 문항 추천 — 최근 통과율 100%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 12,
+      "timestep": 4,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 20,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 100%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 24,
+      "timestep": 5,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 22,
+      "n_total": 22,
+      "error_pattern": "undeclared_variable_or_method"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 100%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 25,
+      "timestep": 6,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 21,
+      "n_total": 21,
+      "error_pattern": "compile_error_other"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 100%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 21,
+      "timestep": 7,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 20,
+      "n_total": 20,
+      "error_pattern": "helper_function_missing_return"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 100%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 20,
+      "timestep": 8,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 14,
+      "n_total": 14,
+      "error_pattern": "helper_function_missing_return"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 100%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 17,
+      "timestep": 9,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 26,
+      "n_total": 26,
+      "error_pattern": "compile_error_other"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.682
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 32%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 22,
+      "timestep": 10,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 25,
+      "n_total": 25,
+      "error_pattern": "undeclared_variable_or_method"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.682
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 32%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 40,
+      "timestep": 11,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 13,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.285,
+        "반복문": null,
+        "배열/문자열": null
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 72%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 37,
+      "timestep": 12,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 15,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.156,
+        "반복문": null,
+        "배열/문자열": 0.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 84%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 39,
+      "timestep": 13,
+      "compile_ok": true,
+      "test_pass_rate": 0.789474,
+      "n_failed": 4,
+      "n_total": 19,
+      "error_pattern": "partial_failure_logic"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.177,
+        "반복문": 0.141,
+        "배열/문자열": 0.096
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 82%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 34,
+      "timestep": 14,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 14,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.113,
+        "반복문": 0.072,
+        "배열/문자열": 0.058
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 89%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 46,
+      "timestep": 15,
+      "compile_ok": true,
+      "test_pass_rate": 0.444444,
+      "n_failed": 10,
+      "n_total": 18,
+      "error_pattern": "partial_failure_logic"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.264,
+        "반복문": 0.271,
+        "배열/문자열": 0.238
+      },
+      "weakest_concept": "반복문"
+    },
+    "module3": {
+      "recommended_problem_id": 71,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 73%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "07d34e2419c61216a85a2156b2cf8ae4_1",
+    "status": "ok",
+    "module1": {
+      "problem_id": 71,
+      "timestep": 16,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 16,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.177,
+        "반복문": 0.171,
+        "배열/문자열": 0.157
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": null,
+      "recommendation_type": "no_candidate",
+      "reason": "파일럿 문항 풀을 모두 해결하여 추천할 문제가 없음"
+    },
+    "module4": {
+      "feedback_text": "축하해요, 이번 파일럿에 준비된 문제를 모두 풀었어요! 지금까지 배운 개념들을 복습하면서 스스로 비슷한 문제를 만들어보는 것도 좋은 연습이 됩니다.",
+      "direct_answer_leak": false,
+      "judge_reasoning": "파일럿 문항을 모두 해결해 정형 문구를 사용, LLM 미호출"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 13,
+      "timestep": 0,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 23,
+      "n_total": 23,
+      "error_pattern": "helper_function_missing_return"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": null
+      },
+      "weakest_concept": null
+    },
+    "module3": {
+      "recommended_problem_id": 1,
+      "recommendation_type": "fallback_any_unsolved",
+      "reason": "동일/선수 개념 후보가 모두 소진되어 파일럿 풀 내 미해결 문제로 대체 추천"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 5,
+      "timestep": 1,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 8,
+      "n_total": 8,
+      "error_pattern": "compile_error_other"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 1.0
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 1,
+      "recommendation_type": "same_concept_easy",
+      "reason": "동일 개념(조건문)의 쉬운 문항 추천 — 최근 통과율 0%로 완충 필요"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 1,
+      "timestep": 2,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 15,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.543
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 17,
+      "recommendation_type": "same_concept_easy",
+      "reason": "동일 개념(조건문)의 쉬운 문항 추천 — 최근 통과율 46%로 완충 필요"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 3,
+      "timestep": 3,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 16,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.329
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 12,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문)의 유사 난이도 문항 추천 — 최근 통과율 67%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 12,
+      "timestep": 4,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 20,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.21
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 79%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 24,
+      "timestep": 5,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 22,
+      "n_total": 22,
+      "error_pattern": "helper_function_missing_return"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.21
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 79%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 25,
+      "timestep": 6,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 21,
+      "n_total": 21,
+      "error_pattern": "helper_function_missing_return"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.21
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 79%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 21,
+      "timestep": 7,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 20,
+      "n_total": 20,
+      "error_pattern": "compile_error_other"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.21
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 79%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 20,
+      "timestep": 8,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 14,
+      "n_total": 14,
+      "error_pattern": "compile_error_other"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.21
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 79%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 17,
+      "timestep": 9,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 26,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.067
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 93%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 22,
+      "timestep": 10,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 25,
+      "n_total": 25,
+      "error_pattern": "helper_function_missing_return"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.067
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 93%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 40,
+      "timestep": 11,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 13,
+      "n_total": 13,
+      "error_pattern": "helper_function_missing_return"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.61,
+        "반복문": null,
+        "배열/문자열": null
+      },
+      "weakest_concept": "조건문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 39%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 37,
+      "timestep": 12,
+      "compile_ok": true,
+      "test_pass_rate": 1.0,
+      "n_failed": 0,
+      "n_total": 15,
+      "error_pattern": "all_passed"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.333,
+        "반복문": null,
+        "배열/문자열": 0.412
+      },
+      "weakest_concept": "배열/문자열"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 59%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 39,
+      "timestep": 13,
+      "compile_ok": true,
+      "test_pass_rate": 0.368421,
+      "n_failed": 12,
+      "n_total": 19,
+      "error_pattern": "partial_failure_logic"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.45,
+        "반복문": 0.753,
+        "배열/문자열": 0.512
+      },
+      "weakest_concept": "반복문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "prerequisite_concept",
+      "reason": "반복문 최근 통과율 25%로 매우 낮아 선수개념(조건문) 문항으로 되돌아감"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 34,
+      "timestep": 14,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 14,
+      "n_total": 14,
+      "error_pattern": "compile_error_other"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.648,
+        "반복문": 0.874,
+        "배열/문자열": 0.705
+      },
+      "weakest_concept": "반복문"
+    },
+    "module3": {
+      "recommended_problem_id": 46,
+      "recommendation_type": "prerequisite_concept",
+      "reason": "반복문 최근 통과율 13%로 매우 낮아 선수개념(조건문) 문항으로 되돌아감"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "partial_failure",
+    "module1": {
+      "problem_id": 46,
+      "timestep": 15,
+      "compile_ok": true,
+      "test_pass_rate": 0.555556,
+      "n_failed": 8,
+      "n_total": 18,
+      "error_pattern": "partial_failure_logic"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.579,
+        "반복문": 0.697,
+        "배열/문자열": 0.611
+      },
+      "weakest_concept": "반복문"
+    },
+    "module3": {
+      "recommended_problem_id": 71,
+      "recommendation_type": "same_concept_similar",
+      "reason": "동일 개념(조건문/반복문/배열/문자열)의 유사 난이도 문항 추천 — 최근 통과율 30%로 양호, 난이도 유지"
+    },
+    "module4": {
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "stage": "module4"
+    }
+  },
+  {
+    "subject_id": "08fcb5ead4e963a6f0bbdbc971f4a3ee_1",
+    "status": "ok",
+    "module1": {
+      "problem_id": 71,
+      "timestep": 16,
+      "compile_ok": false,
+      "test_pass_rate": 0.0,
+      "n_failed": 16,
+      "n_total": 16,
+      "error_pattern": "undeclared_variable_or_method"
+    },
+    "module2": {
+      "concept_scores": {
+        "조건문": 0.717,
+        "반복문": 0.809,
+        "배열/문자열": 0.743
+      },
+      "weakest_concept": "반복문"
+    },
+    "module3": {
+      "recommended_problem_id": null,
+      "recommendation_type": "no_candidate",
+      "reason": "파일럿 문항 풀을 모두 해결하여 추천할 문제가 없음"
+    },
+    "module4": {
+      "feedback_text": "축하해요, 이번 파일럿에 준비된 문제를 모두 풀었어요! 지금까지 배운 개념들을 복습하면서 스스로 비슷한 문제를 만들어보는 것도 좋은 연습이 됩니다.",
+      "direct_answer_leak": false,
+      "judge_reasoning": "파일럿 문항을 모두 해결해 정형 문구를 사용, LLM 미호출"
+    }
+  }
+]
